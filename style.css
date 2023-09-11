@@ -105,18 +105,6 @@ html:not(.music-on) .ph-speaker-high {
   display: none;
 }
 
-@media(min-width:768px) {
-  html.dark body {
-    background-image: url(./assets/images/stars.jpg);    
-  }
-  body {
-    background-image: url(./assets/images/stormtrooper.jpg);
-  }
-  #focusTimer {
-    margin-top: 0;
-  }
-}
-
 /* toggle: */
 .bb8-toggle {
   --toggle-size: 20px;
