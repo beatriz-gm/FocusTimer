@@ -10,11 +10,6 @@
   --primary-color: #ffffff;
   --controls-bg-color: #725006a6;
 
-  /* toggle */
-  --toggle-size: 25px;
-  --toggle-width: 10.625em;
-  --toggle-height: 5.625em;
-
   font-size: clamp(40%, 1% + 2vw, 62.5%);
 }
 
@@ -105,9 +100,21 @@ html:not(.music-on) .ph-speaker-high {
   display: none;
 }
 
+@media(min-width: 768px) {
+  html.dark body {
+    background-image: url(./assets/images/stars.jpg);    
+  }
+  body {
+    background-image: url(./assets/images/stormtrooper.jpg);
+  }
+  #focusTimer {
+    margin-top: 0;
+  }
+}
+
 /* toggle: */
 .bb8-toggle {
-  --toggle-size: 20px;
+  --toggle-size: 16px;
   --toggle-width: 10.625em;
   --toggle-height: 5.625em;
   --toggle-offset: calc((var(--toggle-height) - var(--bb8-diameter)) / 2);
