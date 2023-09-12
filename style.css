@@ -9,8 +9,10 @@
   --text-color: hsl(194, 0%, 14%);
   --primary-color: #ffffff;
   --controls-bg-color: #725006a6;
+}
 
-  font-size: clamp(40%, 1% + 2vw, 62.5%);
+#app {
+  max-width: 50rem;
 }
 
 html.dark body {
@@ -39,7 +41,7 @@ body {
 #focusTimer {
   display: grid;
   justify-items: center;
-  margin-top: -25rem;
+  margin-top: -20rem;
 }
 
 #toggle-mode {
@@ -100,21 +102,29 @@ html:not(.music-on) .ph-speaker-high {
   display: none;
 }
 
-@media(min-width: 768px) {
+@media(min-width: 50rem) {
+  #app {
+    max-width: 100%;
+  }
   html.dark body {
     background-image: url(./assets/images/stars.jpg);    
   }
   body {
     background-image: url(./assets/images/stormtrooper.jpg);
   }
+  :root {
+    font-size: clamp(40%, 1% + 2vw, 62.5%);
+  }
   #focusTimer {
     margin-top: 0;
+  }
+  .bb8-toggle {
+    font-size: 3.2rem;
   }
 }
 
 /* toggle: */
 .bb8-toggle {
-  --toggle-size: 16px;
   --toggle-width: 10.625em;
   --toggle-height: 5.625em;
   --toggle-offset: calc((var(--toggle-height) - var(--bb8-diameter)) / 2);
@@ -140,7 +150,7 @@ html:not(.music-on) .ph-speaker-high {
   top: 3.5rem;
   right: 3.2rem;
   cursor: pointer;
-  font-size: var(--toggle-size);
+  font-size: 2rem;
 }
 
 .bb8-toggle__checkbox {
